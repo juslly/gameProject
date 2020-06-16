@@ -15,7 +15,7 @@ public class GameTest {
 
         //测试2
         GameTest gameTest1 = new GameTest();
-        gameTest1.should_return_0A4B_given_four_numbers();
+        gameTest1.should_return_4A0B_given_four_numbers();
 
 
     }
@@ -33,6 +33,15 @@ public class GameTest {
             System.out.println(userAnswer[i]);
         }
         String consoleResult = answer.getOutputResult(gameAnswer, userAnswer);
+        if(!"4A0B".equals(consoleResult)){
+            Answer userInputAnswer = new Answer();
+            int[] userInput = userInputAnswer.userInput();
+            consoleResult = answer.getOutputResult(gameAnswer, userInput);
+        }else{
+            System.out.println("恭喜你猜对了");
+        }
+
+
         assertEquals("4A0B", consoleResult);
     }
 

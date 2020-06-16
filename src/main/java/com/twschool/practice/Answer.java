@@ -6,8 +6,8 @@ public class Answer {
     public String getOutputResult(int[] gameAnswer, int[] userAnswer) {
         int amountOfNumAndPosIsEqual = countA(gameAnswer, userAnswer);
         int amountOfNumIsTrueAndPosIsFalse = countB(gameAnswer, userAnswer);
-
-        return amountOfNumAndPosIsEqual + "A" + amountOfNumIsTrueAndPosIsFalse + "B";
+        String result = amountOfNumAndPosIsEqual + "A" + amountOfNumIsTrueAndPosIsFalse + "B";
+        return result;
     }
 
 
@@ -39,9 +39,6 @@ public class Answer {
     public int[] userInput() {
         int[] userAnswer = new int[4];
         Scanner input=new Scanner(System.in);
-//        int userInput = input.nextInt();
-//        String str = String.valueOf(userInput);
-
         String str = input.next();
         for (int i = 0; i < 4; i++) {
             //userAnswer[i] = input.nextInt();
