@@ -39,9 +39,6 @@ public class Answer {
     public int[] userInput() {
         int[] userAnswer = new int[4];
         Scanner input=new Scanner(System.in);
-        //int usernput = input.nextInt();
-        //String str = input.nextLine();
-        //System.out.println(str);
         for (int i = 0; i < 4; i++) {
             userAnswer[i] = input.nextInt();
         }
