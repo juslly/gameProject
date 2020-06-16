@@ -33,13 +33,9 @@ public class GameTest {
             System.out.println(userAnswer[i]);
         }
         String consoleResult = answer.getOutputResult(gameAnswer, userAnswer);
-        if(!"4A0B".equals(consoleResult)){
-            Answer userInputAnswer = new Answer();
-            int[] userInput = userInputAnswer.userInput();
-            consoleResult = answer.getOutputResult(gameAnswer, userInput);
-        }else{
-            System.out.println("恭喜你猜对了");
-        }
+        Game game = new Game();
+        consoleResult = game.judge(gameAnswer,consoleResult);
+
 
 
         assertEquals("4A0B", consoleResult);
