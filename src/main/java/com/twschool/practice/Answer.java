@@ -6,7 +6,7 @@ public class Answer {
     public String getOutputResult(int[] gameAnswer, int[] userAnswer) {
         int amountOfNumAndPosIsEqual = countA(gameAnswer, userAnswer);
         int amountOfNumIsTrueAndPosIsFalse = countB(gameAnswer, userAnswer);
-        String result = amountOfNumAndPosIsEqual + "A" + amountOfNumIsTrueAndPosIsFalse + "B";
+        String result = amountOfNumAndPosIsEqual + "A" + (amountOfNumIsTrueAndPosIsFalse-amountOfNumAndPosIsEqual) + "B";
         return result;
     }
 
@@ -25,8 +25,9 @@ public class Answer {
         int amountOfNumIsTrueAndPosIsFalse = 0;
         for (int i = 0; i < userAnswer.length; i++){
             for (int j = 0; j < gameAnswer.length; j++){
-                if(userAnswer[i] == gameAnswer[j] && i != j){
+                if(userAnswer[i] == gameAnswer[j]){
                     amountOfNumIsTrueAndPosIsFalse++;
+                    break;
 
                 }
 

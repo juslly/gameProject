@@ -3,7 +3,7 @@ package com.twschool.practice;
 public class Game {
     public String judge(int[] gameAnswer, String consoleResult) {
         String result = consoleResult;
-        if (!"4A0B".equals(consoleResult)) {
+        if (!"4A0B".equals(result)) {
             Answer userInputAnswer = new Answer();
             Answer answer = new Answer();
             int[] userInput = userInputAnswer.userInput();
