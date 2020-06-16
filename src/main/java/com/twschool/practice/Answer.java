@@ -1,5 +1,7 @@
 package com.twschool.practice;
 
+import java.util.Scanner;
+
 public class Answer {
     public String getOutputResult(int[] gameAnswer, int[] userAnswer) {
         int amountOfNumAndPosIsEqual = countA(gameAnswer, userAnswer);
@@ -34,4 +36,16 @@ public class Answer {
         return amountOfNumIsTrueAndPosIsFalse;
     }
 
+    public int[] userInput() {
+        int[] userAnswer = new int[4];
+        Scanner input=new Scanner(System.in);
+        //int usernput = input.nextInt();
+        //String str = input.nextLine();
+        //System.out.println(str);
+        for (int i = 0; i < 4; i++) {
+            userAnswer[i] = input.nextInt();
+        }
+
+        return userAnswer;
+    }
 }
