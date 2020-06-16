@@ -29,16 +29,33 @@ public class GameTest {
             System.out.print(gameAnswer[i]);
         }
         int userAnswer[] = answer.userInput();
-        for(int i = 0 ;i < 4; i++){
-            System.out.println(userAnswer[i]);
-        }
         String consoleResult = answer.getOutputResult(gameAnswer, userAnswer);
+        System.out.println(consoleResult);
         Game game = new Game();
-        consoleResult = game.judge(gameAnswer,consoleResult);
+        consoleResult = game.isOverOrNot(gameAnswer,consoleResult);
+//
+//        for(int k = 0 ;k < 6;k++){
+//            Game game = new Game();
+//            String flag = game.judge(consoleResult);
+//            if("0".equals(flag)){
+//                int userInputAnswer[] = answer.userInput();
+//                consoleResult = answer.getOutputResult(gameAnswer, userInputAnswer);
+//            }else if ("1".equals(flag)){
+//                break;
+//            }
+//            if(k == 5){
+//                System.out.println("失败！");
+//            }
+//
+//        }
+        if(null != consoleResult){
+            assertEquals("4A0B", consoleResult);
+
+        }else{
+            assertEquals(null, consoleResult);
+        }
 
 
-
-        assertEquals("4A0B", consoleResult);
     }
 
     public void should_return_0A4B_given_four_numbers() {
