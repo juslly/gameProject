@@ -26,7 +26,7 @@ public class GameTest {
         Generator generator = new Generator();
         int gameAnswer[] = generator.getRandom();
         for(int i = 0 ;i < 4; i++){
-            System.out.println(gameAnswer[i]);
+            System.out.print(gameAnswer[i]);
         }
         int userAnswer[] = answer.userInput();
         for(int i = 0 ;i < 4; i++){

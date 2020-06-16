@@ -39,8 +39,13 @@ public class Answer {
     public int[] userInput() {
         int[] userAnswer = new int[4];
         Scanner input=new Scanner(System.in);
+//        int userInput = input.nextInt();
+//        String str = String.valueOf(userInput);
+
+        String str = input.next();
         for (int i = 0; i < 4; i++) {
-            userAnswer[i] = input.nextInt();
+            //userAnswer[i] = input.nextInt();
+            userAnswer[i] =Integer.parseInt(String.valueOf(str.charAt(i)));
         }
 
         return userAnswer;

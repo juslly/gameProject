@@ -11,6 +11,7 @@ public class Generator {
             gameAnswer[i] = random.nextInt(10);
 
         }
+        System.out.println("生成的随机数为：");
         return gameAnswer;
     }
 }
